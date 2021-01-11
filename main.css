@@ -1,0 +1,163 @@
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: end;
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+}
+
+.imagebox {
+  left: 0;
+  width: 47%;
+  height: 100vh;
+  background-image: url("https://i.insider.com/5aba85a48c43961a008b478a?width=1100&format=jpeg&auto=webp");
+  background-size: cover;
+  padding-bottom: 2rem;
+  opacity: 0.55;
+  filter: saturate(200%);
+}
+
+.content {
+  padding: 1.2rem;
+}
+
+#textbox {
+  border: 0.2rem solid #f1425d;
+  margin: 1.8rem;
+  background-color: #fff;
+  animation: fadein 6s;
+}
+
+p {
+  margin: 1.5rem;
+  color: rgba(8, 8, 8, 0.8);
+  text-align: center;
+  overflow: scroll;
+  animation: fadein 3s;
+}
+
+.main {
+  margin-top: 0;
+  width: 57%;
+  height: 100vh;
+  flex-grow: 1;
+  overflow-y: auto;
+  background: linear-gradient(to left, #333, #444 30%, #eee 93%, #ed551a 99%);
+  animation: fadein 4s;
+}
+
+.header {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  letter-spacing: 0.5rem;
+  background-image: linear-gradient(to right, #eee 10%, #444 20%, #eee 70%);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+#first-hr {
+  width: 50%;
+}
+
+#second-hr {
+  width: 35%;
+  border: 0.08rem solid white;
+  border-radius: 0.1rem;
+  box-shadow: 0px 1.5px 3.8px rgba(0, 0, 0, 0.7);
+}
+
+select {
+  margin: 2rem;
+  height: 2rem;
+  width: 8rem;
+  border-color: transparent transparent #fff transparent;
+  box-shadow: 0px 1.5px 3.4px rgba(0, 0, 0, 0.4);
+  border-radius: 5%;
+  cursor: pointer;
+  outline: none;
+}
+
+footer {
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #eee;
+}
+
+a:hover {
+  color: #ea1c2c;
+}
+
+/* Fade In & Effects */
+#slash {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ea1c2c, 0 0 30px #ea1c2c,
+    0 0 30px #ea1c2c, 0 0 15px #ea1c2c, 0 0 75px #ea1c2c;
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  .main {
+    width: 100%;
+    position: fixed;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    letter-spacing: 0.3rem;
+    display: inline-flex;
+  }
+
+  .imagebox {
+    width: 40%;
+    background-size: auto;
+    display: block;
+  }
+
+  footer {
+    line-height: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    width: 100%;
+    background: linear-gradient(to left, #333, #444 30%, #eee 93%, #ed551a 80%);
+    position: fixed;
+    animation: fadein 0.1s;
+  }
+}
